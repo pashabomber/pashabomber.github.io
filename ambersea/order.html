@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-theme.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="slick.css">
+	<link rel="stylesheet" href="font-awesome.min.css">
+	<!--[if lt IE 9]> 
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+	<![endif]-->
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+	<div class="menubg"></div>
+	<header class="header">
+		<div class="top-line">
+			<div class="container">
+				<div class="menu-button"><i class="fa fa-bars"></i></div>
+				<form class="search">
+					<input type="text" placeholder="Search"><button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+				<div class="phone">
+					Worldwide delivery 
+					<span>+7 (931) 604 75 01</span>
+				</div>
+				<div class="btn-group">
+					<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">$ <span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Пункт 1</a></li>
+						<li><a href="#">Пункт 2</a></li>
+						<li><a href="#">Пункт 3</a></li>
+					</ul>
+				</div>
+				<div class="cart">
+					<i class="fa fa-shopping-cart"></i>
+					<div class="items">6</div>
+				</div>
+				<button class="but">Login</button>
+				<div class="btn-group">
+					<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">En <span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Пункт 1</a></li>
+						<li><a href="#">Пункт 2</a></li>
+						<li><a href="#">Пункт 3</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="logo">
+				<a href="/"><img src="img/logo.png"></a>
+			</div>
+			<nav class="top-menu">
+				<ul>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">How to buy</a></li>
+					<li><a href="#">Delivery</a></li>
+					<li><a href="#">Payment</a></li>
+					<li><a href="#">Guarantee</a></li>
+					<li><a href="#">Contacts</a></li>
+					<li><a href="#">Responses</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="index-page-slider inner">
+		<div class="item" style="background:url('img/slider1.jpg') center; background-size: cover;">
+		</div>
+		<div class="item" style="background:url('img/slider2.jpg') center; background-size: cover;">
+		</div>
+		<div class="item" style="background:url('img/slider3.jpg') center; background-size: cover;">
+		</div>
+		<div class="item" style="background:url('img/slider.jpg') center; background-size: cover;">
+		</div>
+	</div>
+	<div class="navi">
+		<div class="container">
+			<a href="#">Main</a>  /  <a href="#">Profile</a> /  Checkout
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="order-page">
+					<h1>Checkout</h1>
+					<div class="item">
+						<button class="edit">Edit</button>
+						<div class="name">Delivery country:  </div>
+						<div class="country"><img src="img/country.jpg"> Russia</div>
+					</div>
+					<div class="item">
+						<div class="name">Promo / Code or Voucher</div>
+						<form class="promo">
+							<input type="text" value="promo9990008"> <input type="submit" value="Apply">
+						</form>
+					</div>
+					<div class="item">
+						<button class="edit">Edit</button>
+						<div class="name">Delivery adress</div>
+						<div class="adress">
+							OLga Dzhezhulya<br/>
+							ul. Belanova d. 2a kv.3<br/>
+							Kaliningrad<br/>
+							Kaliningradskaja obl.<br/>
+							236 019
+						</div>
+					</div>
+					<div class="item">
+						<div class="name">Delivery options</div>
+						<div class="delivery">
+							<input type="radio" id="r1" name="r1">
+							<label for="r1">
+								<div>FREE Standart delivery</div>
+								<p>Delivered on or before Friday, 20 October, 2017</p>
+								No delivery on Public Holidays. Orders are subject to Customs and Duty charges, payable by the recipient and you may be 
+							</label>
+							<div class="clear"></div>
+							<input type="radio" id="r2" name="r1">
+							<label for="r2">
+								<div>Express delivery   $18.00</div>
+								<p>Delivered on or before Friday, 20 October, 2017</p>
+								No delivery on Public Holidays. Orders are subject to Customs and Duty charges, payable by the recipient and you may be 
+							</label>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="item">
+						<button class="edit">Edit</button>
+						<div class="name bold">Payment</div><br/>
+						<div class="name">Billing adress</div>
+						<div class="adress">
+							OLga Dzhezhulya<br/>
+							ul. Belanova d. 2a kv.3<br/>
+							Kaliningrad<br/>
+							Kaliningradskaja obl.<br/>
+							236 019
+						</div>
+					</div>
+					<div class="item">
+						<button class="edit">Edit</button>
+						<div class="name bold">Payment type</div><br/>
+						<div class="name">Credit / Debit card</div>
+						<div class="credit">
+							<img src="img/credit.jpg">
+							<div class="text">
+								OLga Dzhezhulya<br/>
+								ul. Belanova d. 2a kv.3<br/>
+								Kaliningrad
+							</div>
+							<div class="clear"></div>
+							<div class="cvv">
+								CVV:<br/>
+								<input type="text">
+							</div>
+						</div>
+					</div>
+					<div class="submit">
+						<input type="submit" value="Place order">
+						<p>By placing your order you agree to our Terms & Conditions, privacy and returns policies . You also consent to some of your data being stored by ASOS, which may be used to make future shopping experiences better for you.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-5">
+				<div class="cart-total">
+					<a href="#" class="edit">Edit</a>
+					<div class="name">1 Item</div>
+					<div class="item">
+						<img src="img/product.jpg" class="image">
+						<div class="content">
+							<div class="price">$125.00</div>
+							<p>Necklaces with amber from our brand new «Modernism» </p>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<table>
+						<tr>
+							<td>Sub-total</td>
+							<td>Delivery</td>
+						</tr>
+						<tr>
+							<td>$250.00</td>
+							<td>$0.00</td>
+						</tr>
+						<tr class="big">
+							<td>Total to pay</td>
+							<td>$250.00</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="payment">
+		<div class="container">
+			<img src="img/payment.jpg">
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<nav>
+				<ul>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">How to buy</a></li>
+					<li><a href="#">Delivery</a></li>
+					<li><a href="#">Payment</a></li>
+					<li><a href="#">Guarantee</a></li>
+					<li><a href="#">Contacts</a></li>
+					<li><a href="#">Responses</a></li>
+				</ul>
+				<ul class="second">
+					<li><a href="#">Necklace</a></li>
+					<li><a href="#">Inklyuza</a></li>
+					<li><a href="#">Rings</a></li>
+					<li><a href="#">Earring</a></li>
+					<li><a href="#">Pendents</a></li>
+					<li><a href="#">Beads</a></li>
+					<li><a href="#">Braceletce</a></li>
+					<li><a href="#">Souvenir</a></li>
+					<li><a href="#">Picture</a></li>
+					<li><a href="#">Another</a></li>
+				</ul>
+			</nav>
+			<div class="contacts">
+				Worldwide delivery
+				<div class="phone">+7 (931) 604 75 01</div>
+				<div class="social">
+					<a href="#"><img src="img/social1.png"></a>
+					<a href="#"><img src="img/social2.png"></a>
+					<a href="#"><img src="img/social3.png"></a>
+				</div>
+				<div class="copy">© AmberSea.com</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</footer>
+	<div class="popup">
+		<div class="window">
+			<a class="close"></a>
+			<div class="name">Login</div>
+			<form>
+				Username or email address *
+				<input type="text">
+				Password *
+				<input type="password">
+				<div class="remember">
+					<input type="checkbox"> Remember me
+				</div>
+				<a href="#" class="lost">Lost your password?</a>
+				<div class="clear"></div>
+				<div class="submit">
+					<input type="submit" value="Login">
+				</div>
+			</form>
+			<div class="new">
+				If you dont hava an account, please<br/>
+				<button>Create an account</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
