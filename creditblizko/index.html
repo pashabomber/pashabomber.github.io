@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="font-awesome.min.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<!--[if lt IE 9]> 
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+	<![endif]-->
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="js/common.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	  $( function() {
+		$( "#slider-range-max" ).slider({
+		  range: "max",
+		  min: 1000,
+		  max: 1000000,
+		  value: 200000,
+		  slide: function( event, ui ) {
+			$( "#amount" ).val( ui.value + ' p.');
+		  }
+		});
+		$( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) + ' p.');
+	  } );
+	</script>
+	<script>
+	  $( function() {
+		$( "#slider-range-max2" ).slider({
+		  range: "max",
+		  min: 1,
+		  max: 72,
+		  value: 4,
+		  slide: function( event, ui ) {
+			$( "#amount2" ).val( ui.value + ' месяца(ев)');
+		  }
+		});
+		$( "#amount2" ).val( $( "#slider-range-max2" ).slider( "value" ) + ' месяца(ев)');
+	  } );
+	</script>
+</head>
+<body>
+	<div class="menubg"></div>
+	<div class="wrap">
+		<header class="header">
+			<div class="logo">
+				<a href="/"><img src="img/logo.png"></a>
+				<div>
+					<a href="/" class="link">Кредит <span>Близко</span></a>
+					Ваш город: <i class="fa fa-map-marker"></i> <a href="#" class="city">Москва</a>
+				</div>
+			</div>
+			<div class="menu-button">
+				<i class="fa fa-bars"></i>
+			</div>
+			<nav class="top-menu">
+				<ul>
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Условия</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Кредиты банков</a></li>
+					<li><a href="#">Срочные займы</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="clear"></div>
+		</header>
+		<div class="index-about-text">
+			<div class="top-text">Кредит близко – все кредиты рядом с Вами!</div>
+			<p>«КредитБлизко.ру» - найдите на карте выгодный и удобный кредит рядом с вами!<br/>Оформите онлайн и получите деньги наличными или на карту. </p>
+			<button>найти кредит</button>
+			<div class="flex">
+				<div class="item">
+					<img src="img/about1.png">
+					<div>Выберите ваш <br/>город</div>
+					1400 городов - кредиты в каждом городе России.
+				</div>
+				<div class="item">
+					<img src="img/about2.png">
+					<div>Найдите кредиты <br/>поблизости</div>
+					150 адресов банков и МФО в Москве
+				</div>
+				<div class="item">
+					<img src="img/about3.png">
+					<div>Получите желаемую <br/>сумму</div>
+					от 500 руб. до 10 млн. рублей сумма кредита
+				</div>
+				<div class="item">
+					<img src="img/about4.png">
+					<div>Выберите удобный <br/>срок погашения</div>
+					от 1 дня до 10 лет срок кредита
+				</div>
+			</div>
+		</div>
+		<div class="calculator">
+			<div class="top-text">Укажите условия</div>
+			<div class="middle-text">
+				Весь алгоритм достаточно прост: с помощью фильтров выделите интересные варианты, сравните условия, подберите самые выгодные, заполните анкету на сайте банка или МФО и получите одобренную сумму желаемым способом.
+			</div>
+			<div class="tabs">
+				<ul class="tabNavigation">
+					<li><a href="#t1"><span>Кредитные до 1 млн рублей</span></a></li>
+					<li><a href="#t2"><span>Ипотека</span></a></li>
+					<li><a href="#t3"><span>Автокредит</span></a></li>
+					<li><a href="#t4"><span>Кредитные карты</span></a></li>
+				</ul>
+				<div class="content" id="t1">
+					<form>
+						<div class="params">
+							<div class="flex">
+								<div class="item">
+									Сумма
+									<div id="slider-range-max"></div>
+									<input type="text" id="amount" readonly>
+								</div>
+								<div class="item">
+									Срок погашения
+									<div id="slider-range-max2"></div>
+									<input type="text" id="amount2" readonly>
+								</div>
+							</div>
+						</div>
+						<div class="button">
+							<button>найти кредит</button>
+						</div>
+						<div class="clear"></div>
+						<div class="result">
+							<div class="map" style="background: url('img/map.jpg') center;"></div>
+							<div class="text">
+								Нажмите на метку на карте, чтобы посмотреть условия кредита, контакты банка и заполнить онлайн заявку.
+								<div class="bank">
+									<img src="img/bank1.jpg"><br/>
+									Кредит всего по 2 документам! <br/>
+									Ставка от 14,9%!<br/>
+									от 10 000 до 850 000 руб.<br/>
+									от 12 месяцев до 84 месяцев<br/>
+									<a href="#">Подробнее</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</form>
+				</div>
+				<div class="content" id="t2">
+					222
+				</div>
+				<div class="content" id="t3">
+					333
+				</div>
+				<div class="content" id="t4">
+					444
+				</div>
+			</div>
+		</div>
+		<div class="cash-credits">
+			<div class="top-text">Кредиты наличными с онлайн-заявкой</div>
+			<div class="middle-text">
+				Заполните кредитную анкету на сайте банка, получите одобрение и заберите деньги в ближайшем офисе. Рекомендуем подать 3-5 заявок в разные банки и выбрать из одобренных предложений самое выгодное.
+			</div>
+			<div class="tabs2">
+				<ul class="tabNavigation">
+					<li><a href="#t11"><span>Кредитные до 1 млн рублей</span></a></li>
+					<li><a href="#t12"><span>Ипотека</span></a></li>
+					<li><a href="#t13"><span>Автокредит</span></a></li>
+					<li><a href="#t14"><span>Кредитные карты</span></a></li>
+				</ul>
+				<div class="content" id="t11">
+					<div class="flex">
+						<div class="item">
+							<div class="image">
+								<img src="img/bank2.jpg">
+							</div>
+							<div class="text">
+								Кредит наличными от <span>11.9%</span> в банке Ренессанс Кредит. Деньги в день обращения!
+							</div>
+							<div class="text bld">
+								Ставка от 11,9% до 26,3% годовых<br/>
+								Сумма от 30 000 до 700 000 руб<br/>
+								Срок от 24 месяцев до 5 лет
+							</div>
+							<div class="button">
+								<button>подробнее</button>
+								<a href="#">Онлайн заявка</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="image">
+								<img src="img/bank3.jpg">
+							</div>
+							<div class="text">
+								Кредит по одному документу на любые цели, без справок и поручителей!
+							</div>
+							<div class="text bld">
+								Ставка от 15%<br/>
+								Сумма от 25 000 до 15 млн. рублей<br/>
+								Срок от 13 месяцев до 20 лет
+							</div>
+							<div class="button">
+								<button>подробнее</button>
+								<a href="#">Онлайн заявка</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="image">
+								<img src="img/bank4.jpg">
+							</div>
+							<div class="text">
+								Возобновляемая кредитная линия до 500 000 рублей от <span>14.9%</span> годовых
+							</div>
+							<div class="text bld">
+								Ставка от 14,9%<br/>
+								Сумма до 500 000 рублей<br/>
+								Срок от 6 до 60 месяцев
+							</div>
+							<div class="button">
+								<button>подробнее</button>
+								<a href="#">Онлайн заявка</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content" id="t12">
+					22
+				</div>
+				<div class="content" id="t13">
+					33
+				</div>
+				<div class="content" id="t14">
+					44
+				</div>
+			</div>
+			<div class="bottom-link">
+				<a href="#">Показать все кредиты наличными в Москве</a>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="wrap">
+			<div class="social">
+				<a href="#"><img src="img/social1.png"></a>
+				<a href="#"><img src="img/social2.png"></a>
+				<a href="#"><img src="img/social3.png"></a>
+				<a href="#"><img src="img/social4.png"></a>
+				<a href="#"><img src="img/social5.png"></a>
+			</div>
+			<ul>
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Условия</a></li>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">Кредиты банков</a></li>
+				<li><a href="#">Срочные займы</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			Copyright © 2017 Kreditblizko.ru
+		</div>
+	</footer>
+</body>
+</html>
